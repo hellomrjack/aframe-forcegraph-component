@@ -1,4 +1,5 @@
 /* global AFRAME */
+import ThreeForceGraph from 'three-forcegraph';
 
 if (typeof AFRAME === 'undefined') {
   throw new Error('Component attempted to register before AFRAME was available.');
@@ -8,12 +9,6 @@ let accessorFn = require('accessor-fn');
 if ('default' in accessorFn) {
   // unwrap default export
   accessorFn = accessorFn.default;
-}
-
-let ThreeForceGraph = require('three-forcegraph');
-if ('default' in ThreeForceGraph) {
-  // unwrap default export
-  ThreeForceGraph = ThreeForceGraph.default;
 }
 
 const parseJson = function (prop) {
